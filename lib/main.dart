@@ -30,13 +30,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Firebase Analytics Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Firebase Analytics Demo - MaterialApp',
       navigatorObservers: <NavigatorObserver>[observer],
       home: MyHomePage(
-        title: 'Firebase Analytics Demo',
         analytics: analytics,
         observer: observer,
       ),
@@ -47,12 +43,10 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
     Key? key,
-    required this.title,
     required this.analytics,
     required this.observer,
   }) : super(key: key);
 
-  final String title;
   final FirebaseAnalytics analytics;
   final FirebaseAnalyticsObserver observer;
 
@@ -308,7 +302,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Firebase Analytics Demo - MainPage'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:flutter/material.dart';
 
 class TabsPage extends StatefulWidget {
-  TabsPage(this.observer, {Key? key}) : super(key: key);
+  const TabsPage(this.observer, {Key? key}) : super(key: key);
 
   final FirebaseAnalyticsObserver observer;
 
@@ -19,7 +19,7 @@ class TabsPage extends StatefulWidget {
 class _TabsPageState extends State<TabsPage>
     with
         SingleTickerProviderStateMixin,
-    // ignore: prefer_mixin
+        // ignore: prefer_mixin
         RouteAware {
   final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
